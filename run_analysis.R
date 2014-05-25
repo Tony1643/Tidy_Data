@@ -1,4 +1,4 @@
-setwd("d:/documents/coursera/gcd/UCI HAR Dataset")
+# setwd("d:/documents/coursera/gcd/UCI HAR Dataset")
 library(data.table)
 library(plyr)
 
@@ -20,7 +20,7 @@ activity.labels$activity.id <- as.factor(activity.labels$activity.id)
 # Get testdata
 # This table contains the measurements made on  the test subjects
 
-setwd("d:/documents/coursera/gcd/UCI HAR Dataset/test")
+# setwd("d:/documents/coursera/gcd/UCI HAR Dataset/test")
 
 x.test <- data.frame(read.table("X_test.txt", header=FALSE))
 
@@ -52,7 +52,7 @@ test.data <- data.table(subject.test, y.test, type=as.factor("test"),x.test)
 
 # Now get training data
 
-setwd("d:/documents/coursera/gcd/UCI HAR Dataset/train")
+# setwd("d:/documents/coursera/gcd/UCI HAR Dataset/train")
 
 x.train <- data.frame(read.table("X_train.txt", header=FALSE))
 names(x.train) <- temp.names
@@ -92,7 +92,7 @@ names(samsung.cleaned)[1:2] <- c("activity.id","subject.id")
 
 # Output a comma separated variable file of the clean file of averages.
 
-setwd("d:/documents/coursera/gcd/proj")
+# setwd("d:/documents/coursera/gcd/proj")
 write.table(samsung.cleaned, file = "tidy_samsung.csv", sep=",", row.names=FALSE)
 
 
